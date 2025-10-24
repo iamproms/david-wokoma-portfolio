@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth transition-colors duration-300">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="All achievements and accomplishments of David Wokoma." />
+    <title>Achievements | David Wokoma</title>
+
+    <!-- Apply stored theme instantly -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#64FFDA',
+                        darkBg: '#0A192F',
+                        darkCard: '#112240',
+                        lightBg: '#F8FAFC',
+                        lightText: '#0A192F',
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="font-inter bg-darkBg text-gray-300 dark:bg-lightBg dark:text-gray-800 transition-colors duration-500">
+
+    <!-- ===== Navbar ===== -->
+    <header
+        class="fixed top-0 w-full bg-darkBg/90 dark:bg-white/80 backdrop-blur-md z-50 shadow transition-colors duration-500">
+        <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+            <a href="index.html#home" class="text-2xl font-bold text-primary hover:opacity-80 transition">David</a>
+
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="index.html#home" class="hover:text-primary">Home</a></li>
+                <li><a href="index.html#about" class="hover:text-primary">About</a></li>
+                <li><a href="achievements.html" class="hover:text-primary">Achievements</a></li>
+                <li><a href="gallery.html" class="hover:text-primary">Gallery</a></li>
+                <li><a href="index.html#academics" class="hover:text-primary">Academics</a></li>
+                <li><a href="index.html#contact" class="hover:text-primary">Contact</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-3">
+                <button id="menu-btn" class="md:hidden text-primary text-2xl">☰</button>
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg border border-gray-500 text-gray-300 dark:text-gray-800 hover:bg-gray-700 dark:hover:bg-gray-200 transition">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden flex-col space-y-4 text-center pb-4 md:hidden bg-darkBg dark:bg-lightBg transition">
+            <a href="index.html#home" class="hover:text-primary">Home</a>
+            <a href="index.html#about" class="hover:text-primary">About</a>
+            <a href="achievements.html" class="hover:text-primary">Achievements</a>
+            <a href="gallery.html" class="hover:text-primary">Gallery</a>
+            <a href="index.html#academics" class="hover:text-primary">Academics</a>
+            <a href="index.html#contact" class="hover:text-primary">Contact</a>
+        </div>
+    </header>
+
+    <!-- ===== Achievements Content ===== -->
+    <main class="pt-28 pb-20 px-6 max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-center text-white dark:text-lightText mb-10">All Achievements</h1>
+
+        <!-- WRO 2024 -->
+        <div id="wro-2024" class="achievement-card mb-8 scroll-mt-32">
+            <div class="bg-darkCard dark:bg-white rounded-xl shadow-lg p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white dark:text-darkBg mb-2">World Robot Olympiad 2024
+                        </h2>
+                        <p class="text-gray-400 dark:text-gray-600">International Finals • Robotics Innovation • Earth
+                            Allies</p>
+                    </div>
+                    <button class="expand-btn text-primary text-2xl font-mono">↓</button>
+                </div>
+
+                <div class="achievement-content hidden mt-6">
+                    <img src="assets/images/wro2024.png" alt="David Wokoma at WRO 2024"
+                        class="rounded-xl shadow-lg w-full mb-6">
+
+                    <div class="space-y-4 text-gray-300 dark:text-gray-700 leading-relaxed">
+                        <p>
+                            The <span class="text-primary font-medium">World Robot Olympiad (WRO) 2024</span> was an
+                            incredible
+                            experience that brought together young innovators from around the globe. I had the amazing
+                            opportunity
+                            to represent Nigeria at the World Robot Olympiad (WRO) in Izmir, Turkey. My team competed in
+                            the
+                            RoboMission Elementary category, and we were recognized as the best elementary team from
+                            Nigeria and the
+                            top team from West Africa. It was an incredible moment for all of us.
+                        </p>
+
+                        <p>
+                            The theme for the year was “Earth Allies – Sustainable Farming.” Our challenge was to design
+                            and program
+                            a robot that could help with farming tasks such as sorting vegetables, watering crops, and
+                            preparing the
+                            soil. We built our robot using LEGO® Spike Prime and programmed it with Scratch, which made
+                            it easy to
+                            test our ideas and make quick improvements.
+                        </p>
+
+                        <p>
+                            The preparation took a lot of teamwork and practice. We spent weeks building, coding, and
+                            testing to
+                            make sure our robot could complete the missions accurately within the time limit. Sometimes
+                            it worked
+                            perfectly, and other times we had to go back to the drawing board—but that’s what made it
+                            fun and
+                            rewarding.
+                        </p>
+
+                        <p>
+                            When we arrived in Izmir, I was amazed by how many teams had come from all around the world.
+                            Everyone
+                            was friendly, and it was exciting to meet other kids who also love robots and technology. We
+                            learned
+                            from each other, shared stories, and even exchanged small souvenirs from our countries.
+
+                            Competing against teams nationwide taught me valuable lessons about teamwork, design
+                            iteration, and
+                            resilience under pressure. It also deepened my passion for <strong>STEM</strong> and
+                            inspired me to
+                            explore fields like <strong>AI, machine learning, and robotics engineering</strong>.
+                        </p>
+
+                        <p>
+                            Apart from the competition, I really enjoyed the city itself. Izmir was beautiful, with nice
+                            weather and
+                            a relaxed atmosphere. I loved walking around the city, trying new foods, and spending time
+                            with my
+                            teammates after our matches. It was a great mix of learning and fun.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-6 mt-6">
+                            <img src="assets/images/wro_stage.jpg" alt="WRO stage"
+                                class="rounded-lg shadow-md object-cover w-full h-48 md:h-64">
+                            <img src="assets/images/wro_team.jpg" alt="Team photo"
+                                class="rounded-lg shadow-md object-cover w-full h-48 md:h-64">
+                        </div>
+
+                        <p class="mt-6">
+                            Looking back, WRO 2024 taught me a lot—not only about robotics but also about teamwork,
+                            problem-solving,
+                            and staying calm under pressure. It showed me that hard work truly pays off, and that
+                            learning through
+                            challenges can be exciting.
+
+                            This experience made me even more interested in robotics and technology. I hope to keep
+                            learning, keep
+                            building, and one day use what I know to create solutions that can help people and improve
+                            our world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Science Fair 2023 -->
+        <div id="science-fair-2023" class="achievement-card mb-8 scroll-mt-32">
+            <div class="bg-darkCard dark:bg-white rounded-xl shadow-lg p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white dark:text-darkBg mb-2">STEM Festival 2024</h2>
+                        <p class="text-gray-400 dark:text-gray-600">First Place Elementary • Safe Cities</p>
+                    </div>
+                    <button class="expand-btn text-primary text-2xl font-mono">↓</button>
+                </div>
+
+                <div class="achievement-content hidden mt-6">
+                    <img src="assets/images/stemfest24-logo.png" alt="Science Fair Project"
+                        class="rounded-xl shadow-lg w-full mb-6">
+
+                    <div class="space-y-4 text-gray-300 dark:text-gray-700 leading-relaxed">
+                        <p>
+                            Won <strong>First Place Elementary team</strong> in the STEM Festival 2024 with my project
+                            <span class="text-primary font-medium">"Solar-Powered Water Purification System"</span>.
+                            The project focused on creating an affordable and sustainable solution for clean water
+                            access
+                            in remote areas.
+                        </p>
+
+                        <p>
+                            The system used solar panels to power a water pump and UV purification module, capable of
+                            purifying up to 10 liters of water per day. I designed the circuit layout and built the
+                            prototype using Arduino for automated operation.
+                        </p>
+
+                        <p>
+                            This project taught me about renewable energy systems, circuit design, and the importance
+                            of creating practical solutions for real-world problems. The judges particularly appreciated
+                            the focus on sustainability and affordability.
+                        </p>
+
+                        <div class="bg-primary/10 border border-primary/20 rounded-lg p-4 mt-4">
+                            <h4 class="font-semibold text-primary mb-2">Key Learnings:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Solar energy harvesting and battery management</li>
+                                <li>Water purification principles and UV treatment</li>
+                                <li>Arduino programming for automation</li>
+                                <li>Project presentation and scientific communication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regional Coding Competition -->
+        <div id="coding-competition" class="achievement-card mb-8 scroll-mt-32">
+            <div class="bg-darkCard dark:bg-white rounded-xl shadow-lg p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white dark:text-darkBg mb-2">STEM Festival 2025
+                        </h2>
+                        <p class="text-gray-400 dark:text-gray-600">Fourth Place • Health • Education • Agriculture</p>
+                    </div>
+                    <button class="expand-btn text-primary text-2xl font-mono">↓</button>
+                </div>
+
+                <div class="achievement-content hidden mt-6">
+                    <img src="assets/images/stemfest25-logo.png" alt="STEM Festival"
+                        class="rounded-xl shadow-lg w-full mb-6">
+
+                    <div class="space-y-4 text-gray-300 dark:text-gray-700 leading-relaxed">
+                        <p>
+                            Secured <strong>Second Place</strong> in the Regional Python Coding Competition 2023,
+                            competing against 50+ participants from various schools. The competition tested
+                            problem-solving skills, algorithm efficiency, and clean code practices.
+                        </p>
+
+                        <p>
+                            The challenges included:
+                        </p>
+
+                        <ul class="list-disc list-inside space-y-2 ml-4">
+                            <li>Implementing sorting algorithms with optimal time complexity</li>
+                            <li>Solving mathematical problems using recursive functions</li>
+                            <li>Creating a simple text-based game with object-oriented programming</li>
+                            <li>Debugging and optimizing provided code snippets</li>
+                        </ul>
+
+                        <p>
+                            My strongest performance was in the algorithm optimization round, where I implemented
+                            a pathfinding algorithm that outperformed most other solutions in both speed and
+                            memory usage.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-6 mt-6">
+                            <div class="bg-darkBg/50 dark:bg-gray-200/50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Skills Demonstrated</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Algorithm design & analysis</li>
+                                    <li>• Problem decomposition</li>
+                                    <li>• Code optimization</li>
+                                    <li>• Time management</li>
+                                </ul>
+                            </div>
+                            <div class="bg-darkBg/50 dark:bg-gray-200/50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Technologies Used</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Python 3.9</li>
+                                    <li>• Jupyter Notebook</li>
+                                    <li>• Git version control</li>
+                                    <li>• Unit testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- You can add more achievements following the same pattern -->
+
+        <div class="text-center mt-12">
+            <a href="index.html#achievements"
+                class="bg-primary text-darkBg px-6 py-3 rounded-lg font-semibold hover:bg-[#52eac7] transition">
+                ← Back to Home
+            </a>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="text-center py-6 text-gray-500 dark:text-gray-600 text-sm">
+        © <span id="year"></span> David Wokoma. All rights reserved.
+    </footer>
+
+    <script>
+        // Theme toggle logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        // Initialize theme
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+            themeIcon.textContent = '☀️';
+        } else {
+            html.classList.remove('dark');
+            themeIcon.textContent = '🌙';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.classList.toggle('dark');
+            themeIcon.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Expand/collapse functionality for achievements
+        document.querySelectorAll('.expand-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.closest('.achievement-card').querySelector('.achievement-content');
+                const isHidden = content.classList.contains('hidden');
+
+                // Close all other open achievements
+                document.querySelectorAll('.achievement-content').forEach(otherContent => {
+                    if (otherContent !== content) {
+                        otherContent.classList.add('hidden');
+                        otherContent.closest('.achievement-card').querySelector('.expand-btn').textContent = '↓';
+                    }
+                });
+
+                // Toggle current achievement
+                content.classList.toggle('hidden');
+                btn.textContent = isHidden ? '↑' : '↓';
+
+                // Smooth scroll to achievement if opening
+                if (isHidden) {
+                    setTimeout(() => {
+                        content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 100);
+                }
+            });
+        });
+
+        // Auto-expand achievement if URL has hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetAchievement = document.querySelector(hash);
+                if (targetAchievement) {
+                    const expandBtn = targetAchievement.querySelector('.expand-btn');
+                    const content = targetAchievement.querySelector('.achievement-content');
+
+                    if (expandBtn && content.classList.contains('hidden')) {
+                        expandBtn.click();
+                    }
+
+                    // Smooth scroll to the achievement
+                    setTimeout(() => {
+                        targetAchievement.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                }
+            }
+        });
+
+        // Year update
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
