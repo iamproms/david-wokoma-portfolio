@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth transition-colors duration-300">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,6 +47,7 @@
 <body class="font-inter bg-darkBg text-gray-300 dark:bg-lightBg dark:text-gray-800 transition-colors duration-500">
 
     <!-- ===== Navbar ===== -->
+    <!-- ===== Navbar ===== -->
     <header
         class="fixed top-0 w-full bg-darkBg/90 dark:bg-white/80 backdrop-blur-md z-50 shadow transition-colors duration-500">
         <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
@@ -54,7 +56,7 @@
             <ul class="hidden md:flex space-x-8 font-medium">
                 <li><a href="index.html#home" class="hover:text-primary">Home</a></li>
                 <li><a href="index.html#about" class="hover:text-primary">About</a></li>
-                <li><a href="achievements.html" class="hover:text-primary">Achievements</a></li>
+                <li><a href="#achievements" class="hover:text-primary">Achievements</a></li>
                 <li><a href="certifications.html" class="hover:text-primary">Certifications</a></li>
                 <li><a href="gallery.html" class="hover:text-primary text-primary">Gallery</a></li>
                 <li><a href="index.html#academics" class="hover:text-primary">Academics</a></li>
@@ -72,14 +74,46 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden flex-col space-y-4 text-center pb-4 md:hidden bg-darkBg dark:bg-lightBg transition">
-            <a href="index.html#home" class="hover:text-primary">Home</a>
-            <a href="index.html#about" class="hover:text-primary">About</a>
-            <a href="achievements.html" class="hover:text-primary">Achievements</a>
-            <li><a href="certifications.html" class="hover:text-primary">Certifications</a></li>
-            <a href="gallery.html" class="hover:text-primary text-primary">Gallery</a>
-            <a href="index.html#academics" class="hover:text-primary">Academics</a>
-            <a href="index.html#contact" class="hover:text-primary">Contact</a>
+            class="hidden md:hidden bg-darkBg dark:bg-lightBg border-t border-gray-700 dark:border-gray-300 shadow-lg">
+            <div class="py-4 px-6 space-y-3">
+                <a href="index.html#home"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Home
+                </a>
+                <a href="index.html#about"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    About
+                </a>
+                <a href="achievements.html"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Achievements
+                </a>
+                <a href="certifications.html"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Certifications
+                </a>
+                <a href="gallery.html"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Gallery
+                </a>
+                <a href="index.html#academics"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Academics
+                </a>
+                <a href="index.html#contact"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Contact
+                </a>
+
+                <!-- Theme Toggle in Mobile Menu -->
+                <div class="pt-3 border-t border-gray-600 dark:border-gray-400">
+                    <button id="mobile-theme-toggle"
+                        class="flex items-center space-x-2 py-2 px-4 rounded-lg border border-primary text-primary hover:bg-primary/10 transition w-full justify-center">
+                        <span id="mobile-theme-icon">🌙</span>
+                        <span class="font-medium">Toggle Theme</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -87,18 +121,19 @@
     <main class="pt-28 pb-20 px-6 max-w-7xl mx-auto">
         <h1 class="text-4xl font-bold text-center text-white dark:text-lightText mb-4">Gallery</h1>
         <p class="text-center text-gray-400 dark:text-gray-600 mb-12 max-w-2xl mx-auto">
-            A visual journey through my projects, competitions, and learning experiences. 
+            A visual journey through my projects, competitions, and learning experiences.
             From robotics workshops to science fairs and beyond.
         </p>
 
         <!-- Gallery Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
-            
+
             <!-- Gallery Item 1 -->
             <div class="group relative overflow-hidden rounded-xl shadow-lg bg-darkCard dark:bg-white/60">
-                <img src="assets/images/gallery/david.jpeg" alt="Robotics Workshop" 
+                <img src="assets/images/gallery/david.jpeg" alt="Robotics Workshop"
                     class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div class="p-4 text-white">
                         <h3 class="font-semibold">STEM Office</h3>
                         <p class="text-sm text-gray-300">Building and programming robots</p>
@@ -108,9 +143,10 @@
 
             <!-- Gallery Item 2 -->
             <div class="group relative overflow-hidden rounded-xl shadow-lg bg-darkCard dark:bg-white/60">
-                <img src="assets/images/gallery/david1.jpeg" alt="David and Sister" 
+                <img src="assets/images/gallery/david1.jpeg" alt="David and Sister"
                     class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div class="p-4 text-white">
                         <h3 class="font-semibold">NDDC Award ceremony</h3>
                         <p class="text-sm text-gray-300">David and his Sister</p>
@@ -120,9 +156,10 @@
 
             <!-- Gallery Item 3 -->
             <div class="group relative overflow-hidden rounded-xl shadow-lg bg-darkCard dark:bg-white/60">
-                <img src="assets/images/gallery/david2.jpeg" alt="Coding Session" 
+                <img src="assets/images/gallery/david2.jpeg" alt="Coding Session"
                     class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div class="p-4 text-white">
                         <h3 class="font-semibold">NDDC Award ceremony</h3>
                         <p class="text-sm text-gray-300">David, his Dad and Sister</p>
@@ -132,9 +169,10 @@
 
             <!-- Gallery Item 4 -->
             <div class="group relative overflow-hidden rounded-xl shadow-lg bg-darkCard dark:bg-white/60">
-                <img src="assets/images/gallery/david4.jpeg" alt="WRO teammates" 
+                <img src="assets/images/gallery/david4.jpeg" alt="WRO teammates"
                     class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div class="p-4 text-white">
                         <h3 class="font-semibold">WRO Turkey</h3>
                         <p class="text-sm text-gray-300">David and his WRO teammates</p>
@@ -144,9 +182,10 @@
 
             <!-- Gallery Item 5 -->
             <div class="group relative overflow-hidden rounded-xl shadow-lg bg-darkCard dark:bg-white/60">
-                <img src="assets/images/gallery/david5.jpeg" alt="WRO participants" 
+                <img src="assets/images/gallery/david5.jpeg" alt="WRO participants"
                     class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div class="p-4 text-white">
                         <h3 class="font-semibold">WRO Turkey</h3>
                         <p class="text-sm text-gray-300">David and some WRO participants</p>
@@ -156,9 +195,10 @@
 
             <!-- Gallery Item 6 -->
             <div class="group relative overflow-hidden rounded-xl shadow-lg bg-darkCard dark:bg-white/60">
-                <img src="assets/images/gallery/david6.jpeg" alt="Cultural Wear" 
+                <img src="assets/images/gallery/david6.jpeg" alt="Cultural Wear"
                     class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div
+                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div class="p-4 text-white">
                         <h3 class="font-semibold">Cultural Day</h3>
                         <p class="text-sm text-gray-300">Kalabari Outfit</p>
@@ -178,7 +218,8 @@
         </div>
 
         <div class="text-center mt-12">
-            <a href="index.html#home" class="bg-primary text-darkBg px-6 py-3 rounded-lg font-semibold hover:bg-[#52eac7] transition">
+            <a href="index.html#home"
+                class="bg-primary text-darkBg px-6 py-3 rounded-lg font-semibold hover:bg-[#52eac7] transition">
                 ← Back to Home
             </a>
         </div>
@@ -226,11 +267,11 @@
         window.addEventListener('load', () => {
             const galleryGrid = document.getElementById('gallery-grid');
             const emptyState = document.getElementById('empty-gallery');
-            
+
             // Count actual images that load successfully
             let loadedImages = 0;
             const images = galleryGrid.querySelectorAll('img');
-            
+
             images.forEach(img => {
                 if (img.complete && img.naturalHeight !== 0) {
                     loadedImages++;
@@ -244,14 +285,14 @@
                     });
                 }
             });
-            
+
             function checkGalleryContent() {
                 if (loadedImages === 0) {
                     galleryGrid.classList.add('hidden');
                     emptyState.classList.remove('hidden');
                 }
             }
-            
+
             // Initial check
             setTimeout(checkGalleryContent, 1000);
         });
@@ -260,4 +301,5 @@
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>

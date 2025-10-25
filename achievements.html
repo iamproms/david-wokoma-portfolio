@@ -47,6 +47,7 @@
 <body class="font-inter bg-darkBg text-gray-300 dark:bg-lightBg dark:text-gray-800 transition-colors duration-500">
 
     <!-- ===== Navbar ===== -->
+    <!-- ===== Navbar ===== -->
     <header
         class="fixed top-0 w-full bg-darkBg/90 dark:bg-white/80 backdrop-blur-md z-50 shadow transition-colors duration-500">
         <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
@@ -55,7 +56,7 @@
             <ul class="hidden md:flex space-x-8 font-medium">
                 <li><a href="index.html#home" class="hover:text-primary">Home</a></li>
                 <li><a href="index.html#about" class="hover:text-primary">About</a></li>
-                <li><a href="achievements.html" class="hover:text-primary">Achievements</a></li>
+                <li><a href="#achievements" class="hover:text-primary text-primary">Achievements</a></li>
                 <li><a href="certifications.html" class="hover:text-primary">Certifications</a></li>
                 <li><a href="gallery.html" class="hover:text-primary">Gallery</a></li>
                 <li><a href="index.html#academics" class="hover:text-primary">Academics</a></li>
@@ -73,14 +74,46 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden flex-col space-y-4 text-center pb-4 md:hidden bg-darkBg dark:bg-lightBg transition">
-            <a href="index.html#home" class="hover:text-primary">Home</a>
-            <a href="index.html#about" class="hover:text-primary">About</a>
-            <a href="achievements.html" class="hover:text-primary">Achievements</a>
-            <li><a href="certifications.html" class="hover:text-primary">Certifications</a></li>
-            <a href="gallery.html" class="hover:text-primary">Gallery</a>
-            <a href="index.html#academics" class="hover:text-primary">Academics</a>
-            <a href="index.html#contact" class="hover:text-primary">Contact</a>
+            class="hidden md:hidden bg-darkBg dark:bg-lightBg border-t border-gray-700 dark:border-gray-300 shadow-lg">
+            <div class="py-4 px-6 space-y-3">
+                <a href="index.html#home"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Home
+                </a>
+                <a href="index.html#about"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    About
+                </a>
+                <a href="achievements.html"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Achievements
+                </a>
+                <a href="certifications.html"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Certifications
+                </a>
+                <a href="gallery.html"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Gallery
+                </a>
+                <a href="index.html#academics"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Academics
+                </a>
+                <a href="index.html#contact"
+                    class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+                    Contact
+                </a>
+
+                <!-- Theme Toggle in Mobile Menu -->
+                <div class="pt-3 border-t border-gray-600 dark:border-gray-400">
+                    <button id="mobile-theme-toggle"
+                        class="flex items-center space-x-2 py-2 px-4 rounded-lg border border-primary text-primary hover:bg-primary/10 transition w-full justify-center">
+                        <span id="mobile-theme-icon">🌙</span>
+                        <span class="font-medium">Toggle Theme</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 

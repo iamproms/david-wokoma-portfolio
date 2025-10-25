@@ -8,9 +8,7 @@
   <title>David Wokoma | Portfolio</title>
 
   <!-- Apply stored theme instantly -->
-  <!-- Apply stored theme instantly -->
   <script>
-    // Fix: Check for 'dark' theme and add dark class
     if (localStorage.getItem('theme') === 'dark') {
       document.documentElement.classList.add('dark');
     }
@@ -74,15 +72,38 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu"
-      class="hidden flex-col space-y-4 text-center pb-4 md:hidden bg-darkBg dark:bg-lightBg transition">
-      <a href="#home" class="hover:text-primary">Home</a>
-      <a href="#about" class="hover:text-primary">About</a>
-      <a href="#achievements" class="hover:text-primary">Achievements</a>
-      <li><a href="certifications.html" class="hover:text-primary">Certifications</a></li>
-      <a href="gallery.html" class="hover:text-primary">Gallery</a>
-      <a href="#academics" class="hover:text-primary">Academics</a>
-      <a href="#contact" class="hover:text-primary">Contact</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-darkBg dark:bg-lightBg border-t border-gray-700 dark:border-gray-300 shadow-lg">
+      <div class="py-4 px-6 space-y-3">
+        <a href="#home" class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+          Home
+        </a>
+        <a href="#about" class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+          About
+        </a>
+        <a href="achievements.html" class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+          Achievements
+        </a>
+        <a href="certifications.html" class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+          Certifications
+        </a>
+        <a href="gallery.html" class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+          Gallery
+        </a>
+        <a href="#academics" class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+          Academics
+        </a>
+        <a href="#contact" class="block py-2 px-4 rounded-lg text-white dark:text-lightText hover:bg-primary/20 hover:text-primary transition font-medium">
+          Contact
+        </a>
+        
+        <!-- Theme Toggle in Mobile Menu -->
+        <div class="pt-3 border-t border-gray-600 dark:border-gray-400">
+          <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2 px-4 rounded-lg border border-primary text-primary hover:bg-primary/10 transition w-full justify-center">
+            <span id="mobile-theme-icon">🌙</span>
+            <span class="font-medium">Toggle Theme</span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -93,7 +114,7 @@
       <img src="assets/images/David Wokoma Photo.jpg" alt="Profile photo"
         class="w-32 h-32 mx-auto rounded-full border-4 border-primary shadow-lg mb-6" />
       <h2 class="text-4xl md:text-5xl font-montserrat text-white dark:text-lightText mb-3">
-        Hi, I’m <span class="text-primary">David Wokoma</span>
+        Hi, I'm <span class="text-primary">David Wokoma</span>
       </h2>
       <p class="text-lg text-gray-400 dark:text-gray-600 mb-6">Young Innovator & Robotics Enthusiast</p>
       <a href="achievements.html"
@@ -102,7 +123,6 @@
     </div>
   </section>
 
-  <!-- ===== About ===== -->
   <!-- ===== About ===== -->
   <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
     <h3 class="text-3xl font-bold text-center mb-10 text-white dark:text-lightText">About Me</h3>
@@ -256,7 +276,6 @@
     </div>
   </section>
 
-
   <!-- ===== Contact ===== -->
   <section id="contact" class="py-20 px-6 bg-darkCard dark:bg-gray-100 transition-colors duration-500">
     <h3 class="text-3xl font-bold text-center mb-16 text-white dark:text-lightText">Get In Touch</h3>
@@ -308,7 +327,7 @@
 
       <!-- Right: Contact Form -->
       <div class="bg-darkBg dark:bg-white/80 p-8 rounded-2xl shadow-lg">
-        <form name="contact" method="POST" netlify data-netlify="true" action="/success.html" class="space-y-6">
+        <form name="contact" method="POST" netlify data-netlify="true" class="space-y-6">
           <input type="hidden" name="form-name" value="contact" />
 
           <div>
@@ -373,9 +392,21 @@
       });
     });
 
+    // Mobile theme toggle
+    document.getElementById('mobile-theme-toggle').addEventListener('click', () => {
+      const isDark = html.classList.toggle('dark');
+      themeIcon.textContent = isDark ? '☀️' : '🌙';
+      document.getElementById('mobile-theme-icon').textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Sync mobile theme icon on load
+    if (localStorage.getItem('theme') === 'dark') {
+      document.getElementById('mobile-theme-icon').textContent = '☀️';
+    }
+
     // Year update
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-
 </html>
