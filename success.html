@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sent Successfully | David Wokoma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#64FFDA',
+                        darkBg: '#0A192F',
+                        darkCard: '#112240',
+                        lightBg: '#F8FAFC',
+                        lightText: '#0A192F',
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+<body class="font-inter bg-darkBg text-gray-300 dark:bg-lightBg dark:text-gray-800 transition-colors duration-500 min-h-screen flex items-center justify-center">
+    <div class="text-center max-w-md mx-6">
+        <div class="text-6xl mb-6">✅</div>
+        <h1 class="text-3xl font-bold text-white dark:text-lightText mb-4">Message Sent!</h1>
+        <p class="text-gray-400 dark:text-gray-600 mb-8">
+            Thank you for your message! I'll get back to you soon.
+        </p>
+        <a href="index.html" class="bg-primary text-darkBg px-6 py-3 rounded-lg font-semibold hover:bg-[#52eac7] transition">
+            ← Back to Home
+        </a>
+        
+        <p class="text-sm text-gray-500 dark:text-gray-500 mt-8">
+            You will be redirected automatically in <span id="countdown">5</span> seconds...
+        </p>
+    </div>
+
+    <script>
+        // Auto-redirect after 5 seconds
+        let seconds = 5;
+        const countdown = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            seconds--;
+            countdown.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
